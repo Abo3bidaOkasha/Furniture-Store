@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Store</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: bold;
+      }
+
+      .hero {
+        background: url("https://images.unsplash.com/photo-1618221195710-dd355c64a3b1")
+          center/cover no-repeat;
+        color: white;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      section {
+        padding: 3rem 2rem;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10rem;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin: auto;
+        max-width: 100%;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 1rem;
+      }
+
+      .card-body h3,
+      .card-body h5 {
+        margin-bottom: 0.5rem;
+      }
+
+      .card-body p {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+      }
+
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .parent .card {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .section-title {
+        text-transform: capitalize;
+        text-align: center;
+        font-family: cursive;
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav a {
+          margin: 0.5rem 0;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.5rem;
+        }
+
+        .hero p {
+          font-size: 0.9rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header style="position: fixed; width: 100%">
+      <h1>Furniture Store</h1>
+      <nav>
+        <a href="#chairs">Chairs</a>
+        <a href="#beds">Beds</a>
+        <a href="#offers">Offers</a>
+      </nav>
+    </header>
+
+    <section
+      class="hero"
+      style="
+        background-image: url(pics/BGG2.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 100vh;
+      "
+    >
+      <h1>Welcome to Your Dream Furniture</h1>
+      <p>Find the best furniture that matches your style and comfort.</p>
+    </section>
+
+    <section id="chairs">
+      <h2>Chairs</h2>
+      <p class="section-title">Some chairs and tables</p>
+      <div
+        class="parent"
+        style="
+          background: url(pics/chBg.jpg) no-repeat center/cover;
+          background-attachment: fixed;
+        "
+      >
+        <!-- 9 Cards for chairs go here (same as before) -->
+        <!-- مثال على واحدة: -->
+        <div class="card">
+          <img src="pics/1.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 1</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/11.jfif" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 2</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/3.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 3</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/4.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 4</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/5.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 5</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/6.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 6</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/7.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 7</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/8.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 8</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/9.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 9</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/10.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 10</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/2.png" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 11</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/1.jpg" alt="Chair 1" />
+          <div class="card-body">
+            <h5 class="card-title">Chair 12</h5>
+            <p class="card-text">Modern and comfortable Furniture</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <!-- باقي الكروت بنفس الشكل -->
+      </div>
+    </section>
+
+    <section id="beds">
+      <h2>Beds</h2>
+      <p class="section-title">Some beds</p>
+      <div
+        class="parent"
+        style="
+          background: url(pics/bg2.png) no-repeat center/cover;
+          background-attachment: fixed;
+        "
+      >
+        <!-- 9 Cards for beds go here (نفس الشكل فوق) -->
+        <div class="card">
+          <img src="pics/b1.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 1</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <!-- باقي الكروت -->
+        <div class="card">
+          <img src="pics/b6.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 2</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b7.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 3</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b8.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 4</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b9.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 5</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b5.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 6</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b7.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 7</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b9.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 8</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b2.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 9</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b3.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 10</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b4.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 11</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="pics/b5.jfif" alt="Bed 1" />
+          <div class="card-body">
+            <h5 class="card-title">Bed 12</h5>
+            <p class="card-text">Comfortable bed for deep sleep.</p>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Furniture Store. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

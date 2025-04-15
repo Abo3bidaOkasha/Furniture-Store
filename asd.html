@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Store</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: bold;
+      }
+
+      .hero {
+        background: url("https://images.unsplash.com/photo-1618221195710-dd355c64a3b1")
+          center/cover no-repeat;
+        color: white;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      section {
+        padding: 3rem 2rem;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 1rem;
+      }
+
+      .card-body h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .card-body p {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+      }
+      /* //////////////////////////////////////////////////////////////////////////////////////////// */
+      .parent {
+        text-align: center;
+        /* height: inherit; */
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        gap: 8px;
+      }
+
+      .div1 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 2;
+      }
+
+      .div2 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 2;
+      }
+
+      .div3 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 2;
+      }
+
+      .div4 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 6;
+      }
+
+      .div5 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 6;
+      }
+
+      .div6 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 6;
+      }
+
+      .div7 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 10;
+      }
+
+      .div8 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 10;
+      }
+
+      .div9 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 10;
+      }
+
+      .card {
+        margin: auto;
+        background-color: antiquewhite;
+      }
+      .card img {
+        background: inherit;
+        width: 100%;
+        height: 200px;
+      }
+      .card-title,
+      .card-text {
+        display: none;
+      }
+      /* //////////////////////////////////////////////////////////////////////////////////////////////// */
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Furniture Store</h1>
+      <nav>
+        <a href="#chairs">Chairs</a>
+        <a href="#beds">Beds</a>
+        <a href="#offers">Offers</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Welcome to Your Dream Furniture</h1>
+      <p>Find the best furniture that matches your style and comfort.</p>
+    </section>
+
+    <section id="chairs">
+      <h2>Chairs</h2>
+      <div class="grid">
+        <!-- <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1582582494700-22a1957fbc2e"
+            alt="Chair 1"
+          />
+          <div class="card-body">
+            <h3>Modern Chair</h3>
+            <p>Comfortable and stylish chair for your living room.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1578898887932-0f8f871bd6c3"
+            alt="Chair 2"
+          />
+          <div class="card-body">
+            <h3>Classic Armchair</h3>
+            <p>Elegant armchair made of fine wood and fabric.</p>
+          </div>
+        </div> -->
+        <div
+          class="parent"
+          style="
+            background-image: url(pics/chBg.jpg);
+            background-size: 100% 100vh;
+            background-attachment: fixed;
+          "
+        >
+          <h2></h2>
+
+          <p
+            style="
+              text-transform: capitalize;
+              text-align: center;
+              font-family: cursive;
+              font-size: 2rem;
+              padding-top: 40px;
+            "
+          >
+            Some chairs and tables
+          </p>
+
+          <div class="div1">
+            <div class="card" style="width: 18rem">
+              <img src="pics/1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary" id="qwqwqw">view</a>
+              </div>
+            </div>
+          </div>
+          <div class="div2">
+            <div class="card" style="width: 18rem">
+              <img src="pics/2.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+          <div class="div3">
+            <div class="card" style="width: 18rem">
+              <img src="pics/3.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+          <div class="div4">
+            <div class="card" style="width: 18rem">
+              <img src="pics/4.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+          <div class="div5">
+            <div class="card" style="width: 18rem">
+              <img src="pics/5.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+          <div class="div6">
+            <div class="card" style="width: 18rem">
+              <img src="pics/6.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+          <div class="div7">
+            <div class="card" style="width: 18rem">
+              <img src="pics/7.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+          <div class="div8">
+            <div class="card" style="width: 18rem">
+              <img src="pics/8.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+          <div class="div9">
+            <div class="card" style="width: 18rem">
+              <img src="pics/9.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beds">
+        <div
+        class="parent"
+        style="
+          background-image: url(pics/bg2.png);
+          background-size: 100% 100vh;
+          background-attachment: fixed;
+        "
+      >
+        <h2></h2>
+        <p
+          style="
+            text-transform: capitalize;
+            text-align: center;
+            font-family: cursive;
+            font-size: 5rem;
+          "
+        >
+          some beds
+        </p>
+        <div class="div1">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b1.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div2">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b2.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div3">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b3.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div4">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b4.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div5">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b5.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div6">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b6.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div7">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b7.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div8">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b8.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+        <div class="div9">
+          <div class="card" style="width: 18rem">
+            <img src="pics/b9.jfif" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <p style="font-size: large; font-weight: 800">price $...</p>
+            <button
+              class="btn btn-primary"
+              style="background-color: #666666"
+              onclick="asd()"
+            >
+              BUY
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Furniture Store. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
